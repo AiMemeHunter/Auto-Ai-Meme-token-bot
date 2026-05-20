@@ -7,7 +7,7 @@
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.108+-009688.svg)](https://fastapi.tiangolo.com)
-(https://github.com/AiMemeHunter/Auto-Ai-Meme-token-bot/actions)
+
 
 *Scan 4 blockchains simultaneously • Detect honeypots in real-time • AI-powered rug pull prediction*
 
