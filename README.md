@@ -44,26 +44,26 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                  Meme Token Hunter Engine                    │
+│                  Meme Token Hunter Engine                   │
 ├──────────┬──────────┬──────────┬──────────┬─────────────────┤
 │  Solana  │   BSC    │ Ethereum │   Base   │  Scanner Layer  │
 │ Raydium  │PancakeSwp│ Uniswap  │Aerodrome │                 │
 │ Orca     │BakerySwap│  V2/V3   │ BaseSwap │                 │
 ├──────────┴──────────┴──────────┴──────────┤                 │
 │            Analysis Pipeline              │                 │
-│  ┌─────────┐ ┌──────────┐ ┌───────────┐  │                 │
-│  │Contract │ │ Honeypot │ │  Rug Pull │  │                 │
-│  │Analyzer │ │ Detector │ │ AI Predict│  │                 │
-│  └─────────┘ └──────────┘ └───────────┘  │                 │
-│  ┌─────────┐ ┌──────────┐                │                 │
-│  │ Social  │ │  Whale   │                │                 │
-│  │Analyzer │ │ Analyzer │                │                 │
-│  └─────────┘ └──────────┘                │                 │
-├──────────────────────────────────────────┤                 │
-│           Alert System                   │                 │
-│  Telegram │ Discord │ REST API           │                 │
-├──────────────────────────────────────────┤                 │
-│  FastAPI + WebSocket │ SQLite │ AI Model │                 │
+│  ┌─────────┐ ┌──────────┐ ┌───────────┐   │                 │
+│  │Contract │ │ Honeypot │ │  Rug Pull │   │                 │
+│  │Analyzer │ │ Detector │ │ AI Predict│   │                 │
+│  └─────────┘ └──────────┘ └───────────┘   │                 │
+│  ┌─────────┐ ┌──────────┐                 │                 │
+│  │ Social  │ │  Whale   │                 │                 │
+│  │Analyzer │ │ Analyzer │                 │                 │
+│  └─────────┘ └──────────┘                 │                 │
+├──────────────────────────────────────────-┤                 │
+│           Alert System                    │                 │
+│  Telegram │ Discord │ REST API            │                 │
+├──────────────────────────────────────────-┤                 │
+│  FastAPI + WebSocket │ SQLite │ AI Model  │                 │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -71,6 +71,7 @@
 
 | Feature | Description |
 |---------|-------------|
+| 🖥 **Live Dashboard** | WebSocket-powered terminal-style dark theme UI with full settings panel — no .env editing required |
 | 🔗 **Multi-Chain Scanning** | Solana, BSC, Ethereum, Base — simultaneous real-time monitoring |
 | 🛡 **5-Point Safety Check** | Contract verification, ownership, LP lock, honeypot, holder distribution |
 | 🧠 **AI Rug Pull Detection** | ML model with CDN download, SHA256 verification, auto-rotation |
@@ -93,7 +94,7 @@ pip install -r requirements.txt
 
 # 3. Configure
 cp .env.example .env
-# Edit .env with your RPC URLs and API keys
+# Edit .env with your RPC URLs and API keys (If you want, you can also make these settings in the guide.)
 
 # 4. Run
 python main.py
