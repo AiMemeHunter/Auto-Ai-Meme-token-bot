@@ -93,7 +93,7 @@ pip install -r requirements.txt
 
 # 3. Configure
 cp .env.example .env
-# Edit .env with your RPC URLs and API keys (If you want, you can also make these settings in the guide.)
+# Edit .env with your RPC URLs and API keys (If you want, you can also make these settings in the GUI.)
 
 # 4. Run
 python main.py
