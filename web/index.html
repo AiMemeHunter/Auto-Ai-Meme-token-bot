@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Real-time multi-chain meme token scanner with AI-powered rug pull detection">
+    <title>Meme Token Hunter — Live Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Matrix Rain Background -->
+    <canvas id="matrix-bg"></canvas>
+
+    <div class="app">
+        <!-- Header -->
+        <header class="header" id="header">
+            <div class="header-left">
+                <div class="logo">
+                    <span class="logo-icon">🔍</span>
+                    <h1>Meme Token Hunter</h1>
+                    <span class="version">v1.0</span>
+                </div>
+                <div class="status-indicator" id="connection-status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Connecting...</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="stat-pill" id="stat-total">
+                    <span class="stat-label">Tokens</span>
+                    <span class="stat-value" id="total-tokens">0</span>
+                </div>
+                <div class="stat-pill" id="stat-safe">
+                    <span class="stat-label">Safe</span>
+                    <span class="stat-value safe" id="safe-tokens">0</span>
+                </div>
+                <div class="stat-pill" id="stat-honeypot">
+                    <span class="stat-label">Honeypots</span>
+                    <span class="stat-value danger" id="honeypot-count">0</span>
+                </div>
+                <button class="btn-export" id="btn-export" title="Export to CSV">
+                    📥 Export
+                </button>
+            </div>
+        </header>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar" id="filters">
+            <div class="filter-group">
+                <label>Chain</label>
+                <div class="chain-filters">
+                    <button class="chain-btn active" data-chain="all">All</button>
+                    <button class="chain-btn" data-chain="solana">◎ SOL</button>
+                    <button class="chain-btn" data-chain="bsc">🔶 BSC</button>
+                    <button class="chain-btn" data-chain="ethereum">⟠ ETH</button>
+                    <button class="chain-btn" data-chain="base">🔵 BASE</button>
+                </div>
+            </div>
+            <div class="filter-group">
+                <label>Safety Score</label>
+                <input type="range" id="safety-filter" min="0" max="100" value="0" class="range-input">
+                <span id="safety-value">0+</span>
+            </div>
+            <div class="filter-group">
+                <label>Time</label>
+                <select id="time-filter" class="select-input">
+                    <option value="1">1h</option>
+                    <option value="6">6h</option>
+                    <option value="24" selected>24h</option>
+                    <option value="72">3d</option>
+                    <option value="168">7d</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Token Feed -->
+        <main class="token-feed" id="token-feed">
+            <div class="feed-header">
+                <span class="col-chain">Chain</span>
+                <span class="col-token">Token</span>
+                <span class="col-safety">Safety</span>
+                <span class="col-rug">Rug Risk</span>
+                <span class="col-liquidity">Liquidity</span>
+                <span class="col-dex">DEX</span>
+                <span class="col-time">Time</span>
+            </div>
+            <div class="feed-body" id="feed-body">
+                <div class="loading-state" id="loading">
+                    <div class="spinner"></div>
+                    <p>🧠 Scanning blockchains...</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Token Detail Modal -->
+        <div class="modal-overlay" id="modal-overlay">
+            <div class="modal" id="token-modal">
+                <button class="modal-close" id="modal-close">✕</button>
+                <div class="modal-content" id="modal-content">
+                    <!-- Dynamically populated -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
