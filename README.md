@@ -78,7 +78,6 @@
 | 📊 **Social Sentiment** | Twitter/X, Telegram, DexScreener activity tracking |
 | 🐳 **Whale Analysis** | Top holder behavior tracking and concentration alerts |
 | 📱 **Telegram & Discord** | Real-time alerts with rich formatting and rate limiting |
-| 🖥 **Live Dashboard** | WebSocket-powered terminal-style dark theme UI |
 | 🔌 **REST API** | FastAPI with OpenAPI docs, API key auth, rate limiting |
 | 💾 **Zero Dependencies** | Self-contained — SQLite database, no external services needed |
 
