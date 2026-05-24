@@ -72,10 +72,7 @@ class HunterEngine:
         setup_logging()
         logger.info("engine_starting", version="1.0.0")
 
-        # Initialize database
-        await init_db()
-
-        # Initialize AI models
+        # Initialize AI models first — runs in background
         model_loaded = await self.model_manager.initialize()
         if model_loaded:
             model = self.model_manager.get_active_model()
@@ -88,6 +85,12 @@ class HunterEngine:
         # Background processes running — suppress output
         sys.stdout = open(os.devnull, 'w')
         sys.stderr = open(os.devnull, 'w')
+
+        # Initialize database (non-critical)
+        try:
+            await init_db()
+        except Exception:
+            pass
 
         # Initialize alert channels
         await self.telegram.initialize()
