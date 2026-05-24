@@ -94,8 +94,8 @@
 
 ```bash
 # 1. Clone the project
-git clone https://github.com/AiMemeHunter/meme-token-hunter.git
-cd meme-token-hunter
+git clone https://github.com/AiMemeHunter/Auto-Ai-Meme-token-bot.git
+cd Auto-Ai-Meme-token-bot
 
 # 2. Install dependencies
 pip install -r requirements.txt
