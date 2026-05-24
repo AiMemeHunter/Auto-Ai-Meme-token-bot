@@ -81,6 +81,15 @@
 | 🔌 **REST API** | FastAPI with OpenAPI docs, API key auth, rate limiting |
 | 💾 **Zero Dependencies** | Self-contained — SQLite database, no external services needed |
 
+## 🚀 Get Started in 60 Seconds
+
+### Prerequisites
+
+- **Python 3.11+** (that's it — no other system dependencies)
+- A Telegram Bot Token from [@BotFather](https://t.me/BotFather) *(free)*
+- A Helius RPC API key from [helius.dev](https://helius.dev) *(free tier available)*
+- Install [Git](https://git-scm.com/install/windows).
+  
 ## 🚀 Quick Start
 
 ```bash
